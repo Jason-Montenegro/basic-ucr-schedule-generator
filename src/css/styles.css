@@ -1,0 +1,280 @@
+/* 💡 Default Theme Specification */
+[data-theme="default"] {
+  /* Primary */
+  --primary-color: #2563EB;
+  --primary-color-tint: #3B82F6;
+  --primary-color-shade: #1D4ED8;
+
+  /* Secondary */
+  --secondary-color: #60A5FA;
+  --secondary-color-tint: #93C5FD;
+  --secondary-color-shade: #3B82F6;
+
+  /* Tertiary */
+  --tertiary-color: #1E3A8A;
+
+  /* Grayscale */
+  --background-color: #F9FAFB;
+  --surface-color: #F3F4F6;
+  --border-color: #D1D5DB;
+  --text-color: #111827;
+  --text-color-secondary: #6B7280;
+}
+
+/* 🔆 Light Theme Specification */
+[data-theme="light"] {
+  /* Primary */
+  --primary-color: #FFFFFF;
+  --primary-color-tint: #F9FAFB;
+  --primary-color-shade: #E5E7EB;
+
+  /* Secondary */
+  --secondary-color: #F3F4F6;
+  --secondary-color-tint: #E5E7EB;
+  --secondary-color-shade: #D1D5DB;
+
+  /* Tertiary */
+  --tertiary-color: #60A5FA;
+
+  /* Grayscale */
+  --background-color: #FFFFFF;
+  --surface-color: #F9FAFB;
+  --border-color: #E5E7EB;
+  --text-color: #111827;
+  --text-color-secondary: #4B5563;
+}
+
+/* 🌑 Dark Theme Specification */
+[data-theme="dark"] {
+  /* Primary */
+  --primary-color: #121212;
+  --primary-color-tint: #1E1E1E;
+  --primary-color-shade: #0A0A0A;
+
+  /* Secondary */
+  --secondary-color: #1F1F1F;
+  --secondary-color-tint: #2A2A2A;
+  --secondary-color-shade: #000000;
+
+  /* Tertiary */
+  --tertiary-color: #BB86FC;
+
+  /* Grayscale */
+  --background-color: #121212;
+  --surface-color: #1E1E1E;
+  --border-color: #333333;
+  --text-color: #E0E0E0;
+  --text-color-secondary: #A0A0A0;
+}
+
+/* 🟩 Matrix Theme Specification */
+[data-theme="matrix"] {
+  /* Primary */
+  --primary-color: #000000;
+  --primary-color-tint: #101010;
+  --primary-color-shade: #000000;
+
+  /* Secondary */
+  --secondary-color: #101010;
+  --secondary-color-tint: #1A1A1A;
+  --secondary-color-shade: #000000;
+
+  /* Tertiary */
+  --tertiary-color: #00FF41;
+
+  /* Grayscale */
+  --background-color: #000000;
+  --surface-color: #101010;
+  --border-color: #00FF41;
+  --text-color: #00FF41;
+  --text-color-secondary: #008F11;
+}
+
+/* 🌸 Cutesy Theme Specification */
+[data-theme="cutesy"] {
+  /* Primary */
+  --primary-color: #FFE4EC;
+  --primary-color-tint: #FFF0F5;
+  --primary-color-shade: #FFB6C1;
+
+  /* Secondary */
+  --secondary-color: #FFC1E3;
+  --secondary-color-tint: #FFD6E9;
+  --secondary-color-shade: #FF99CC;
+
+  /* Tertiary */
+  --tertiary-color: #FF69B4;
+
+  /* Grayscale */
+  --background-color: #FFE4EC;
+  --surface-color: #FFF0F5;
+  --border-color: #FFB6C1;
+  --text-color: #7B2E5E;
+  --text-color-secondary: #B36B8A;
+}
+
+/* 🩶 Gray Theme Specification */
+[data-theme="gray"] {
+  /* Primary */
+  --primary-color: #F0F0F0;
+  --primary-color-tint: #F7F7F7;
+  --primary-color-shade: #D9D9D9;
+
+  /* Secondary */
+  --secondary-color: #E5E5E5;
+  --secondary-color-tint: #F2F2F2;
+  --secondary-color-shade: #CCCCCC;
+
+  /* Tertiary */
+  --tertiary-color: #FF6600;
+
+  /* Grayscale */
+  --background-color: #F0F0F0;
+  --surface-color: #F7F7F7;
+  --border-color: #CCCCCC;
+  --text-color: #2C2C2C;
+  --text-color-secondary: #555555;
+}
+
+/* ❄ Arctic Theme Specification */
+[data-theme="arctic"] {
+  /* Primary */
+  --primary-color: #E6F7FF;
+  --primary-color-tint: #F0FAFF;
+  --primary-color-shade: #CCE5F6;
+
+  /* Secondary */
+  --secondary-color: #CCEFFF;
+  --secondary-color-tint: #DFF6FF;
+  --secondary-color-shade: #99D6FF;
+
+  /* Tertiary */
+  --tertiary-color: #00AAFF;
+
+  /* Grayscale */
+  --background-color: #E6F7FF;
+  --surface-color: #F0FAFF;
+  --border-color: #99D6FF;
+  --text-color: #00334D;
+  --text-color-secondary: #336680;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+:root {
+  /* Base colors */
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* Font families */
+  --font-family: "Noto Sans", sans-serif;
+
+  /* Font size typescale */
+  --font-size-base: 1.6rem;  /* 16px */
+  --font-size-h1: 3rem;      /* 30px */
+  --font-size-h2: 2.4rem;    /* 24px */
+  --font-size-h3: 1.9rem;    /* 19px */
+  --font-size-h4: 1.5rem;    /* 15px */
+  --font-size-h5: 1.3rem;    /* 13px */
+  --font-size-small: 1.2rem; /* 12px */
+
+  /* Line heights */
+  --line-height-heading: 1.2;
+  --line-height-body: 1.5;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Spacing scale */
+  --space-xxs: 0.4rem;
+  --space-xs:  0.8rem;
+  --space-sm:  1.2rem;
+  --space-md:  1.6rem;
+  --space-lg:  2.4rem;
+  --space-xl:  3.2rem;
+  --space-xxl: 4.8rem;
+
+  /* Buttons */
+  --btn-height-sm: 3.2rem;
+  --btn-height-md: 4rem;
+  --btn-height-lg: 4.8rem;
+  --btn-padding-x: var(--space-sm);
+  --btn-padding-y: 0.8rem;
+  --btn-border-radius: 0.6rem;
+
+  /* Inputs */
+  --input-height: 4rem;
+  --input-padding-x: 1.2rem;
+  --input-border-radius: 0.4rem;
+
+  /* Layout */
+  --container-max-width: 120rem;
+  --container-padding-x: var(--space-md);
+
+  /* Table */
+  --table-header-height: 4rem;
+  --table-cell-height: 3.6rem;
+  --table-border-width: 1px;
+}
+
+/* Browser Styles Normalization */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Layout Styles */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-x);
+}
+
+/* Logo Section Styles */
+  /* Pending */
+
+/* Navigation Section Styles */
+  /* Pending */
+
+/* Course Configurator Section Styles */
+  /* Pending */
+
+/* Schedule Configurator Section Styles */
+  /* Pending */
+
+/* Schedule Table Section Styles */
+  /* Pending */
+
+/* Footer Elements Styles */
+  /* Pending */
+
+/* Media Queries */
+
+/* Tablets */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.7rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+}

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html data-theme="matrix" lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Generador de horarios - UCR</title>
   <link rel="icon" type="image/svg+xml" href="src/assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-  <header>
+  <header class="container">
     <div id="logo-container">
       <img id="site-logo" src="src/assets/logo.svg" alt="Logo del sitio">
       <h1 id="main-page-title">Generador de horarios - UCR</h1>
@@ -39,7 +42,7 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="container">
     <section id="course-configurator-ui">
       <div class="course-name-container">
         <label for="course-name-input">Nombre de curso</label>
@@ -117,7 +120,7 @@
       </table>
     </section>
   </main>
-  <footer>
+  <footer class="container">
     <div id="copyright-line-container">
       <p>&copy; 2025 - Autor: Jason Montenegro. Todos los derechos reservados.</p>
       <a rel="noopener noreferrer" href="https://github.com/Jason-Montenegro/basic-ucr-schedule-generator">Repositorio del proyecto en GitHub</a>
