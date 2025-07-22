@@ -266,14 +266,14 @@ body {
 /* Media Queries */
 
 /* Tablets */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   body {
     font-size: 1.7rem;
   }
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   body {
     font-size: 1.8rem;
   }

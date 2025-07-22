@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="matrix" lang="es">
+<html data-theme="default" lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -12,120 +12,175 @@
 </head>
 <body>
   <header class="container">
-    <div id="logo-container">
-      <img id="site-logo" src="src/assets/logo.svg" alt="Logo del sitio">
+    <div class="header-logo-container">
+      <img id="site-logo" src="/src/assets/logo.svg" alt="Logo del sitio" role="img" />
+
       <h1 id="main-page-title">Generador de horarios - UCR</h1>
     </div>
-    <nav>
-      <ul>
-        <li><button id="reset-schedule-btn">Reiniciar horario</button></li>
-        <li>
-          <button id="save-schedule-file-btn" aria-haspopup="true" aria-expanded="false">Guardar horario</button>
-          <ul class="submenu-nav-list" hidden>
-            <li><button id="save-schedule-as-pdf-btn">Guardar como PDF</button></li>
-            <li><button id="save-schedule-as-image-btn">Guardar como imagen</button></li>
-          </ul>
-        </li>
-        <li><button id="how-to-use-regex-btn">Cómo utilizar expresión horaria</button></li>
-        <li>
-          <button id="change-page-theme-btn" aria-haspopup="true" aria-expanded="false">Cambiar tema</button>
-          <ul class="submenu-nav-list" hidden>
-            <li><button class="change-theme-btn" id="dark-theme-btn">Dark</button></li>
-            <li><button class="change-theme-btn" id="light-theme-btn">Light</button></li>
-            <li><button class="change-theme-btn" id="gray-theme-btn">Gray</button></li>
-            <li><button class="change-theme-btn" id="arctic-theme-btn">Arctic</button></li>
-            <li><button class="change-theme-btn" id="matrix-theme-btn">Matrix</button></li>
-            <li><button class="change-theme-btn" id="cutesy-theme-btn">Cutesy</button></li>
-          </ul>
-        </li>
-        <li><button id="change-page-language-btn">Cambiar idioma</button></li>
-      </ul>
+
+    <nav class="nav-menu-container" role="navigation" aria-label="Menú principal">
+      <button 
+        class="menu-toggle-btn"
+        id="nav-list-content-toggle-btn"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="nav-list-content"
+        aria-label="Mostrar u ocultar menú principal"
+      >
+        <img src="/src/assets/menu-toggle.svg" alt="Botón de acceso a menú" role="img" />
+      </button>
+      
+      <div class="nav-list-container" id="nav-list-content">
+        <ul role="menubar" aria-label="Menú principal">
+          <li role="none">
+            <button role="menuitem" class="nav-list-btn" id="reset-schedule-btn" tabindex="0">
+              Limpiar horario
+            </button>
+          </li>
+          
+          <li role="none">
+            <button 
+              class="nav-list-btn"
+              id="save-schedule-submenu-toggle-btn" 
+              aria-haspopup="true" 
+              aria-expanded="false" 
+              aria-controls="save-schedule-submenu"
+              role="menuitem"
+              tabindex="0"
+            >
+              Guardar horario
+            </button>
+            <div class="nav-submenu-modal" id="save-schedule-submenu" role="menu" hidden>
+              <ul class="nav-submenu-list">
+                <li role="none">
+                  <button role="menuitem" class="nav-list-btn nav-submenu-btn" id="save-schedule-as-pdf-btn" tabindex="-1">
+                    Guardar como PDF
+                  </button>
+                </li>
+                <li role="none">
+                  <button role="menuitem" class="nav-list-btn nav-submenu-btn" id="save-schedule-as-image-btn" tabindex="-1">
+                    Guardar como imagen
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
+          
+          <li role="none">
+            <button
+              class="nav-list-btn"
+              id="how-to-use-regex-container-toggle-btn"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="how-to-use-regex-container"
+              role="menuitem"
+              tabindex="0"
+            >
+                Cómo utilizar expresión horaria
+            </button>
+            <div class="nav-submenu-modal" id="how-to-use-regex-container" role="menu" hidden>
+              <h2 id="how-to-use-regex-title">Cómo utilizar <span id="nav-submenu-modal-regex-handle">Expresión regular</span></h2>
+              <img src="/src/assets/example-of-where-to-get-regex-expressions.png" alt="Ejemplo de origen de expresión regular en informe de matrícula" role="img" width="200px">
+              <p role="text" id="how-to-use-regex-description">
+                Las expresiones siguen un patrón singular que se debe cumplir estrictamente. 
+                Una expresión regular establece reglas para las horas en que se realizan actividades.
+                <br><br>
+                Ej. Si hay una actividad el viernes (V) entre las 14:00 y 15:50, entonces una expresión regular
+                válida para esa actividad sería: <span id="how-to-use-regex-activity-regex-handle">[V 14:00 - 15:50]</span>
+                <br><br>
+                El formato de una expresión regular es:
+                [(Día) (Hora inicial) - (Hora final), (Día) (Hora inicial) - (Hora final)]
+                <br>
+                Se deben poner los corchetes al inicio y final, poner el guión entre los digitos, y el espacio después del día.
+                <br>
+                Para agregar más de un intervalo, se agrega una coma después de la hora final del intervalo anterior y se sigue el mismo patrón.
+                <br>
+                <br>Los días válidos son:
+                <br>L - Lunes
+                <br>K - Martess
+                <br>M - Miércoles
+                <br>J - Jueves
+                <br>V - Viernes
+                <br>S - Sábado
+                <br>D - Domingo
+                <br><br>
+                Si usted tiene un informe de matrícula en <span id="how-to-use-regex-ematricula-handle">ematrícula</span>, puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione.
+              </p>
+            </div>
+          </li>
+
+          <li role="none">
+            <button 
+              class="nav-list-btn"
+              id="page-theme-selector-container-toggle-btn"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="page-theme-selector-container"
+              role="menuitem"
+              tabindex="0"
+            >
+              Cambiar tema
+            </button>
+            <div class="nav-submenu-modal" id="page-theme-selector-container" role="menu" hidden>
+              <ul class="nav-submenu-list">
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="default-theme-btn" role="menuitem" tabindex="-1">Default</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="dark-theme-btn" role="menuitem" tabindex="-1">Oscuro</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="light-theme-btn" role="menuitem" tabindex="-1">Claro</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="gray-theme-btn" role="menuitem" tabindex="-1">Gris</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="arctic-theme-btn" role="menuitem" tabindex="-1">Ártico</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="matrix-theme-btn" role="menuitem" tabindex="-1">Matrix</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="cutesy-theme-btn" role="menuitem" tabindex="-1">Cutesy</button>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li role="none">
+            <button 
+              class="nav-list-btn"
+              id="page-language-selector-container-toggle-btn"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="page-language-selector-container"
+              role="menuitem"
+              tabindex="0"
+            >
+              Cambiar idioma
+            </button>
+            <div class="nav-submenu-modal" id="page-language-selector-container" role="menu" hidden>
+              <ul class="nav-submenu-list">
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="spanish-language-option-btn" role="menuitem" tabindex="-1">Español</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="english-language-option-btn" role="menuitem" tabindex="-1">Inglés</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="portuguese-language-option-btn" role="menuitem" tabindex="-1">Portugués</button>
+                </li>
+                <li role="none">
+                  <button class="nav-list-btn nav-submenu-btn" id="french-language-option-btn" role="menuitem" tabindex="-1">Francés</button>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
-  <main class="container">
-    <section id="course-configurator-ui">
-      <div class="course-name-container">
-        <label for="course-name-input">Nombre de curso</label>
-        <input type="text" id="course-name-input" name="course-name" placeholder="Cálculo 1...">
-      </div>
-      <div class="course-regex-container">
-        <label for="course-regex-input">Expresión horaria</label>
-        <input type="text" id="course-regex-input" name="course-regex" placeholder="[J 13:00 - 14:50, L 13:00 - 15:50]">
-      </div>
-      <div class="course-days-container">
-        <h2>Días de la semana</h2>
-        <div id="course-days-picker-container">
-          <label for="monday">Lunes</label>
-          <input type="checkbox" id="monday" name="days" value="Lunes">
-          <label for="tuesday">Martes</label>
-          <input type="checkbox" id="tuesday" name="days" value="Martes">
-          <label for="wednesday">Miércoles</label>
-          <input type="checkbox" id="wednesday" name="days" value="Miércoles">
-          <label for="thursday">Jueves</label>
-          <input type="checkbox" id="thursday" name="days" value="Jueves">
-          <label for="friday">Viernes</label>
-          <input type="checkbox" id="friday" name="days" value="Viernes">
-          <label for="saturday">Sábado</label>
-          <input type="checkbox" id="saturday" name="days" value="Sábado">
-          <label for="sunday">Domingo</label>
-          <input type="checkbox" id="sunday" name="days" value="Domingo">
-        </div>
-      </div>
-      <div class="course-time-interval-container">
-        <div class="course-initial-time-container">
-          <label for="course-initial-time-selector">Hora inicial</label>
-          <select id="course-initial-time-selector" name="course-initial-time"></select>
-        </div>
-        <div class="course-ending-time-container">
-          <label for="course-ending-time-selector">Hora final</label>
-          <select id="course-ending-time-selector" name="course-ending-time"></select>
-        </div>
-      </div>
-      <div class="color-picker-container">
-        <label for="color-picker-selector">Selecciona un color</label>
-        <input type="color" id="color-picker-selector" name="color-picker-selector">
-      </div>
-      <button id="add-course-to-schedule-btn" type="submit">Agregar curso</button>
-    </section>
-    <section id="schedule-configurator-ui">
-      <div class="schedule-time-interval-container">
-        <div class="schedule-initial-time-container">
-          <label for="schedule-initial-time-selector">Hora inicial de horario</label>
-          <select id="schedule-initial-time-selector" name="schedule-initial-time"></select>
-        </div>
-        <div class="schedule-ending-time-container">
-          <label for="schedule-ending-time-selector">Hora final de horario</label>
-          <select id="schedule-ending-time-selector" name="schedule-ending-time"></select>
-        </div>
-      </div>
-    </section>
-    <section id="schedule-box">
-      <table id="schedule-table">
-        <!-- Schedule header -->
-        <thead id="schedule-header-ui">
-          <tr id="schedule-header-row">
-            <th scope="col">Horas</th>
-            <th scope="col">Lunes</th>
-            <th scope="col">Martes</th>
-            <th scope="col">Miércoles</th>
-            <th scope="col">Jueves</th>
-            <th scope="col">Viernes</th>
-            <th scope="col">Sábado</th>
-            <th scope="col">Domingo</th>
-          </tr>
-        </thead>
-        <tbody id="schedule-body-ui">
-          <!-- Dynamic tags go here -->
-        </tbody>
-      </table>
-    </section>
-  </main>
-  <footer class="container">
-    <div id="copyright-line-container">
-      <p>&copy; 2025 - Autor: Jason Montenegro. Todos los derechos reservados.</p>
-      <a rel="noopener noreferrer" href="https://github.com/Jason-Montenegro/basic-ucr-schedule-generator">Repositorio del proyecto en GitHub</a>
-    </div>
-  </footer>
   <script src="src/js/main.js" type="module"></script>
 </body>
 </html>

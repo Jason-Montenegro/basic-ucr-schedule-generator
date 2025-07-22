@@ -16,7 +16,7 @@ A simple and responsive web app to generate and customize schedules using **HTML
 ✔️ Insert courses using **regular expression input**  
 ✔️ **Adjustable time grid** to expand/reduce hours  
 ✔️ **Persistent storage** with `localStorage`  
-✔️ **Multiple themes:** Dark | Light | Gray | Arctic | Matrix | Cutesy  
+✔️ **Multiple themes:** Default | Light | Dark | Gray | Arctic | Matrix | Cutesy  
 ✔️ Schedule supports **50-minute intervals**  
 
 ---
