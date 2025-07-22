@@ -1,58 +1,64 @@
-# 🗓️ Schedule Generator
+# 🗓️ **Schedule Generator**
 
-A simple web app that generates schedules using **HTML**, **CSS**, and **JavaScript**.
+A simple and responsive web app to generate and customize schedules using **HTML**, **CSS**, and **JavaScript**.
 
----
-
-## ✨ Features
-
-- ➕ Add, edit, and remove courses dynamically.  
-- 🎨 Visual color picker to customize schedule blocks on schedule table.  
-- 🖱️ Drag & drop courses for agile restructuring of schedule.  
-- 💾 Save your generated schedule as **PDF** or **image** files.  
-- ↩️ Reset functionality for new schedules.
-- 🔍 Input course with **regex expression** for quick insertion.  
-- ⏰ Adjustable time grid to expand or reduce hours displayed.  
-- 💾 Use **localStorage** API to preserve schedule when the tab is closed.  
-- 🌗 Multiple themes: Dark | Light | Gray | Arctic | Matrix | Cutesy 
-- 🗓️ Schedule times in intervals of 50 minutes.
+🔗 **Live Preview:** [Click here to view the project](https://jason-montenegro.github.io/basic-ucr-schedule-generator/)
 
 ---
 
-## How to use
+## ✨ **Features**
 
-The user has two ways to insert course details into the schedule.
-
-### First way
-1. The user enters the name of the course, or whatever activity he/she wishes.
-2. The user selects the days he/she has to attend this activity in the week.
-3. The user selects the initial time, and ending time for which the activity is due.
-4. The user selects a color to identify the course data cell in the schedule, in the color picker.
-5. The user clicks the **Add to schedule** button.
-
-### Second way
-1. The user enters the name of the course, or whatever activity he/she wishes.
-2. The user enters a regular expression in the **Regular expression** input box.
-3. The regular expression must follow a certain format to function.
-5. The user clicks the **Add to schedule** button.
-
-The regular expression must follow this regex:
-**/^\[([LKMJVSD]\s\d{2}:\d{2}\s-\s\d{2}:\d{2})(,\s[LKMJVSD]\s\d{2}:\d{2}\s-\s\d{2}:\d{2})*\]$/i**
+✔️ **Add, edit, and remove courses dynamically**  
+✔️ **Color customization** with a visual color picker  
+✔️ **Drag & Drop support** for agile restructuring  
+✔️ Save schedule as **PDF** or **Image**  
+✔️ **Reset schedule** with one click  
+✔️ Insert courses using **regular expression input**  
+✔️ **Adjustable time grid** to expand/reduce hours  
+✔️ **Persistent storage** with `localStorage`  
+✔️ **Multiple themes:** Dark | Light | Gray | Arctic | Matrix | Cutesy  
+✔️ Schedule supports **50-minute intervals**  
 
 ---
-### Use features
 
-- The user can fill name detail, and then can paint instances of the activity in the schedule by
-clicking on the desired cell.
+## 🖥️ **Preview**
+![Preview Screenshot](https://www.svgrepo.com/show/340812/pending.svg)
 
-- In the same manner, the user can eliminate an instance of an activity by clicking on the desired
-cell in the schedule.
+---
 
-- The user could drag activities between cells in the schedule.
+## 📖 **How to Use**
 
-- To change the name and color of an activity in the schedule, the user must add the name in the 
-course name input, and select a new color. There is no way to edit an existing activity in the schedule.
+### ✅ **First method: Manual Input**
+1. Enter the **course name** or activity.
+2. Select the **days** of the week.
+3. Choose **start and end time**.
+4. Pick a **color** from the color picker.
+5. Click **Add to Schedule**.
 
+---
+
+### ✅ **Second method: Using Regex Expression**
+1. Enter the **course name** or activity.
+2. Input a valid **regular expression** in the Regex field:
+  ```regex
+  /^\[([LKMJVSD]\s\d{2}:\d{2}\s-\s\d{2}:\d{2})(,\s[LKMJVSD]\s\d{2}:\d{2}\s-\s\d{2}:\d{2})*\]$/i
+  ```
+3. Click **Add to Schedule**.
+
+### 📌 Example:
+  ```
+  [J 13:00 - 14:50, L 13:00 - 15:50]
+  ```
+---
+
+## ⚙️ Extra Feature
+
+- ✅ **Click to paint or remove activities directly on the schedule.**
+- ✅ **Drag & Drop activities between cells.**
+- ✅ **Change theme dynamically.**
+- ✅ **Save your schedule as PDF or Image.**
+
+---
 
 ## 🛠️ Technologies
 
