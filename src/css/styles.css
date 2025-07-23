@@ -468,15 +468,14 @@ body {
   transform: scale(0.97);
 }
 
-
 #course-configurator-editor-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
-  gap: 5%;
+  gap: 1rem;
 }
 
 .input-box label {
@@ -484,15 +483,15 @@ body {
   font-weight: var(--font-weight-bold);
 }
 
-.course-configurator-input-box-container {
+#course-configurator-input-box-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
-  gap: var(--space-md);
-}
+  gap: var(--space-lg);
 
+}
 
 .input-box input,
 .input-box select {
@@ -641,6 +640,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: var(--space-sm);
 }
 
 /* Schedule Table Section Styles */
@@ -658,11 +658,8 @@ body {
   text-align: center;
 }
 
-#copyright-line-container a {
+#copyright-line-container a, #copyright-line-container a:active, #copyright-line-container a:hover, #copyright-line-container a:visited {
   text-decoration: none;
-}
-
-#copyright-line-container a:active, #copyright-line-container a:hover, #copyright-line-container a:visited {
   color: var(--text-color-secondary);
 }
 
