@@ -43,5 +43,12 @@ const howToUseRegexBtn = document.getElementById("how-to-use-regex-submenu")
 howToUseRegexBtn.addEventListener("click", () => {
   const howToUseRegexContainer = document.getElementById("how-to-use-regex-container");
   howToUseRegexContainer.classList.toggle("hidden");
+  navListContentBtn.click();
 })
 
+const closeHowToUseRegexTn = document.getElementById("how-to-use-regex-close-btn");
+
+closeHowToUseRegexTn.addEventListener("click", () => {
+  const howToUseRegexContent = document.getElementById("how-to-use-regex-container");
+  howToUseRegexContent.classList.toggle("hidden")
+})

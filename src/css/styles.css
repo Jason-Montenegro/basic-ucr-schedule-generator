@@ -284,6 +284,7 @@ body {
   display: flex;
   justify-content: center;
   transition: 200ms;
+  cursor: pointer;
 }
 
 #nav-list-content-toggle-btn:hover {
@@ -326,6 +327,7 @@ body {
   border-color: var(--border-color);
   border-style: solid;
   transition: 200ms;
+  cursor: pointer;
 }
 
 .nav-list-btn:hover {
@@ -350,6 +352,63 @@ body {
 .nav-submenu-btn {
   background-color: var(--tertiary-color);
   color: var(--text-color-secondary);
+}
+
+#how-to-use-regex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 90%;
+  margin: 2rem auto;
+  border-radius: 10px;
+  background-color: var(--secondary-color-tint);
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.302);
+}
+
+#how-to-use-regex-close-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#how-to-use-regex-close-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#how-touse-regex-close-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#how-to-use-regex-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 25vw, 4rem);
+  text-align: center;
+}
+
+#how-to-use-regex-description {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding: var(--space-md);
+}
+
+#how-to-use-regex-content img {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding: var(--space-lg);
+  height: auto;
+  width: clamp(20rem, 25vw, 30rem);
+}
+
+#nav-submenu-modal-regex-handle, #how-to-use-regex-activity-regex-handle, #how-to-use-regex-ematricula-handle {
+  font-weight: var(--font-weight-bold);
 }
 
 /* Course Configurator Section Styles */
@@ -381,5 +440,5 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }

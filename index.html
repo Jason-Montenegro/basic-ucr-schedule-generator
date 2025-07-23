@@ -162,34 +162,40 @@
     </nav>
   </header>
   <div class="hidden" id="how-to-use-regex-container" role="menu">
-    <h2 id="how-to-use-regex-title">Cómo utilizar <span id="nav-submenu-modal-regex-handle">Expresión regular</span></h2>
-    <img src="src/assets/example-of-where-to-get-regex-expressions.png" alt="Ejemplo de origen de expresión regular en informe de matrícula" role="img" width="200px">
-    <p role="text" id="how-to-use-regex-description">
-      Las expresiones siguen un patrón singular que se debe cumplir estrictamente. 
-      Una expresión regular establece reglas para las horas en que se realizan actividades.
-      <br><br>
-      Ej. Si hay una actividad el viernes (V) entre las 14:00 y 15:50, entonces una expresión regular
-      válida para esa actividad sería: <span id="how-to-use-regex-activity-regex-handle">[V 14:00 - 15:50]</span>
-      <br><br>
-      El formato de una expresión regular es:
-      [(Día) (Hora inicial) - (Hora final), (Día) (Hora inicial) - (Hora final)]
-      <br>
-      Se deben poner los corchetes al inicio y final, poner el guión entre los digitos, y el espacio después del día.
-      <br>
-      Para agregar más de un intervalo, se agrega una coma después de la hora final del intervalo anterior y se sigue el mismo patrón.
-      <br>
-      <br>Los días válidos son:
-      <br>L - Lunes
-      <br>K - Martess
-      <br>M - Miércoles
-      <br>J - Jueves
-      <br>V - Viernes
-      <br>S - Sábado
-      <br>D - Domingo
-      <br><br>
-      Si usted tiene un informe de matrícula en <span id="how-to-use-regex-ematricula-handle">ematrícula</span>,
-        puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione.
-    </p>
+    <div id="how-to-use-regex-close-btn-container">
+      <button id="how-to-use-regex-close-btn" aria-label="Cerrar ventana"><img src="src/assets/close-icon.svg" alt="Ícono de cerrar ventana" role="img"></button>
+    </div>
+  
+    <div id="how-to-use-regex-content" role="menu">
+      <h2 id="how-to-use-regex-title">Cómo utilizar <span id="nav-submenu-modal-regex-handle">Expresión regular</span></h2>
+      <img src="src/assets/example-of-where-to-get-regex-expressions.png" alt="Ejemplo de origen de expresión regular en informe de matrícula" role="img">
+      <p role="text" id="how-to-use-regex-description">
+        Las expresiones siguen un patrón singular que se debe cumplir estrictamente. 
+        Una expresión regular establece reglas para las horas en que se realizan actividades.
+        <br><br>
+        Ej. Si hay una actividad el viernes (V) entre las 14:00 y 15:50, entonces una expresión regular
+        válida para esa actividad sería: <span id="how-to-use-regex-activity-regex-handle">[V 14:00 - 15:50]</span>
+        <br><br>
+        El formato de una expresión regular es:
+        [(Día) (Hora inicial) - (Hora final), (Día) (Hora inicial) - (Hora final)]
+        <br>
+        Se deben poner los corchetes al inicio y final, poner el guión entre los digitos, y el espacio después del día.
+        <br>
+        Para agregar más de un intervalo, se agrega una coma después de la hora final del intervalo anterior y se sigue el mismo patrón.
+        <br>
+        <br>Los días válidos son:
+        <br>L - Lunes
+        <br>K - Martess
+        <br>M - Miércoles
+        <br>J - Jueves
+        <br>V - Viernes
+        <br>S - Sábado
+        <br>D - Domingo
+        <br><br>
+        Si usted tiene un informe de matrícula en <span id="how-to-use-regex-ematricula-handle">ematrícula</span>,
+          puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione.
+      </p>
+    </div>
   </div>
   <script src="src/js/main.js" type="module"></script>
 </body>
