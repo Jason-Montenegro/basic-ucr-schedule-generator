@@ -588,7 +588,32 @@ body {
   /* Pending */
 
 /* Footer Elements Styles */
-  /* Pending */
+#copyright-line-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--space-lg);
+  justify-content: space-between;
+  gap: 1rem;
+  transition: 200ms;
+  text-align: center;
+}
+
+#copyright-line-container a {
+  text-decoration: none;
+}
+
+#copyright-line-container a:active, #copyright-line-container a:hover, #copyright-line-container a:visited {
+  color: var(--text-color-secondary);
+}
+
+#copyright-line-container a:active {
+  opacity: 0.5;
+}
+
+#copyright-line-container a:hover {
+  color: var(--text-color);
+}
 
 /* Media Queries */
 
