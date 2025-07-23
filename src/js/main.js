@@ -52,3 +52,11 @@ closeHowToUseRegexTn.addEventListener("click", () => {
   const howToUseRegexContent = document.getElementById("how-to-use-regex-container");
   howToUseRegexContent.classList.toggle("hidden")
 })
+
+const scheduleConfiguratorToggleBtn = document.getElementById("schedule-configurator-toggle-btn");
+
+scheduleConfiguratorToggleBtn.addEventListener("click", () => {
+  const scheduleConfiguratorContainer = document.getElementById("schedule-configurator-modifiers-container");
+  scheduleConfiguratorContainer.classList.toggle("hidden");
+})
+

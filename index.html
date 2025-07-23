@@ -202,10 +202,10 @@
     </div>
   </div>
   <main class="container">
-    <section" id="course-configurator-global-container">
+    <section id="course-configurator-global-container">
       <div id="course-configurator-editor-container">
 
-        <div id="course-configurator-input-box-container">
+        <div class="input-box" id="course-configurator-input-box-container">
           <label for="course-name-input">Nombre de curso</label>
           <input type="text" id="course-name-input" name="course-name" placeholder="Cálculo 1...">
           
@@ -288,7 +288,57 @@
         <button id="add-course-to-schedule-btn" type="submit">Agregar curso</button>
       </div>
     </section>
+
+    <section id="schedule-configurator-global-container">
+      <div class="schedule-configurator-toggle-container">
+        <button id="schedule-configurator-toggle-btn" aria-label="Cerrar ventana">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/></svg>
+        </button>
+      </div>
+      <div class="input-box hidden" id="schedule-configurator-modifiers-container">
+          <div class="schedule-modifier-item">
+            <h2 id="schedule-configurator-title">Intervalos de horas en horario</h2>
+          </div>
+          <div class="schedule-modifier-item">
+            <label for="course-ending-time-selector">Hora inicial</label>
+            <select id="course-ending-time-selector" name="course-ending-time">
+                <option value="00:00">00:00</option>
+                <option value="01:00">01:00</option>
+                <option value="02:00">02:00</option>
+                <option value="03:00">03:00</option>
+                <option value="04:00">04:00</option>
+                <option selected value="05:00">05:00</option>
+                <option value="06:00">06:00</option>
+                <option value="07:00">07:00</option>
+                <option value="08:00">08:00</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+                <option value="22:00">22:00</option>
+                <option value="23:00">23:00</option>
+            </select>
+          </div>
+          <div class="schedule-modifier-item">
+            <label for="course-ending-time-selector">Hora final</label>
+            <select id="course-ending-time-selector" name="course-ending-time">
+              <option value="default">-----</option>
+            </select>
+          </div>
+      </div>
+    </section>
+
   </main>
+  
   <footer class="container">
     <div id="copyright-line-container">
       <p>&copy; 2025 - Autor: Jason Montenegro. Todos los derechos reservados.</p>
