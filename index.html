@@ -161,9 +161,13 @@
       </div>
     </nav>
   </header>
-  <div class="hidden" id="how-to-use-regex-container" role="menu">
+    <div class="hidden" id="how-to-use-regex-container" role="menu">
     <div id="how-to-use-regex-close-btn-container">
-      <button id="how-to-use-regex-close-btn" aria-label="Cerrar ventana"><img src="src/assets/close-icon.svg" alt="Ícono de cerrar ventana" role="img"></button>
+      <button id="how-to-use-regex-close-btn" aria-label="Cerrar ventana">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+        </svg>
+      </button>
     </div>
   
     <div id="how-to-use-regex-content" role="menu">
@@ -185,7 +189,7 @@
         <br>
         <br>Los días válidos son:
         <br>L - Lunes
-        <br>K - Martess
+        <br>K - Martes
         <br>M - Miércoles
         <br>J - Jueves
         <br>V - Viernes
@@ -193,10 +197,100 @@
         <br>D - Domingo
         <br><br>
         Si usted tiene un informe de matrícula en <span id="how-to-use-regex-ematricula-handle">ematrícula</span>,
-          puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione.
+          puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione correctamente.
       </p>
     </div>
   </div>
+  <main class="container">
+    <section" id="course-configurator-global-container">
+      <div id="course-configurator-editor-container">
+
+        <div id="course-configurator-input-box-container">
+          <label for="course-name-input">Nombre de curso</label>
+          <input type="text" id="course-name-input" name="course-name" placeholder="Cálculo 1...">
+          
+          <label for="course-regex-input">Expresión horaria</label>
+          <input type="text" id="course-regex-input" name="course-regex" placeholder="[J 13:00 - 14:50, L 13:00 - 15:50]">
+
+          <label for="course-initial-time-selector">Hora inicial</label>
+          <select id="course-initial-time-selector" name="course-initial-time">
+            <option value="default">-----</option>
+            <option value="05:00">05:00</option>
+            <option value="06:00">06:00</option>
+            <option value="07:00">07:00</option>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+            <option value="22:00">22:00</option>
+          </select>
+          
+          <label for="course-ending-time-selector">Hora final</label>
+          <select id="course-ending-time-selector" name="course-ending-time">
+            <option value="default">-----</option>
+          </select>
+        </div>
+
+        <div id="course-configurator-modifiers-container">
+          <div id="course-configurator-days-checkbox-container">
+            <div id="course-configurator-days-checkbox-title-container">
+              <h2 id="course-configurator-days-checkbox-title">Días de la semana</h2>
+            </div>
+            <div id="course-configurator-days-checkbox-options-container">
+              <div class="checkbox-item">
+                <label for="monday">Lunes</label>
+                <input type="checkbox" id="monday" name="days" value="Lunes">
+              </div>
+              <div class="checkbox-item">
+                <label for="tuesday">Martes</label>
+                <input type="checkbox" id="tuesday" name="days" value="Martes">
+              </div>
+              <div class="checkbox-item">
+                <label for="wednesday">Miércoles</label>
+                <input type="checkbox" id="wednesday" name="days" value="Miércoles">
+              </div>
+              <div class="checkbox-item">
+                <label for="thursday">Jueves</label>
+                <input type="checkbox" id="thursday" name="days" value="Jueves">
+              </div>
+              <div class="checkbox-item">
+                <label for="friday">Viernes</label>
+                <input type="checkbox" id="friday" name="days" value="Viernes">
+              </div>
+              <div class="checkbox-item">
+                <label for="saturday">Sábado</label>
+                <input type="checkbox" id="saturday" name="days" value="Sábado">
+              </div>
+              <div class="checkbox-item">
+                <label for="sunday">Domingo</label>
+                <input type="checkbox" id="sunday" name="days" value="Domingo">
+              </div>
+            </div>
+          </div>
+          <div id="course-configurator-color-picker-container">
+            <label for="color-picker-selector">Selecciona un color</label>
+            <input type="color" id="color-picker-selector" name="color-picker-selector">
+          </div>
+        </div>
+
+      </div>
+      <div id="add-course-btn-container">
+        <button id="add-course-to-schedule-btn" type="submit">Agregar curso</button>
+      </div>
+    </section>
+
+
+  </main>
   <script src="src/js/main.js" type="module"></script>
 </body>
 </html>

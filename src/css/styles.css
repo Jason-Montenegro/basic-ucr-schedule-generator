@@ -277,7 +277,7 @@ body {
   border-color: var(--border-color);
   border-style: solid;
   padding: var(--btn-padding-y) var(--btn-padding-x);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-btn);
   line-height: var(--line-height-body);
   min-width: 100%;
@@ -289,10 +289,12 @@ body {
 
 #nav-list-content-toggle-btn:hover {
   background-color: var(--primary-color-shade);
+  transform: scale(1.02);
 }
 
 #nav-list-content-toggle-btn:active {
   background-color: var(--primary-color-tint);
+  transform: scale(0.97);
 }
 
 .nav-list-container li {
@@ -328,14 +330,17 @@ body {
   border-style: solid;
   transition: 200ms;
   cursor: pointer;
+  font-weight: var(--font-weight-bold);
 }
 
 .nav-list-btn:hover {
   background-color: var(--secondary-color-shade);
+  transform: scale(1.02);
 }
 
 .nav-list-btn:active {
   background-color: var(--tertiary-color);
+  transform: scale(0.97);
 }
 
 .nav-submenu {
@@ -375,9 +380,14 @@ body {
 }
 
 #how-to-use-regex-close-btn {
+  background: none;
   border: none;
-  background: transparent;
   cursor: pointer;
+  color: var(--tertiary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
 #how-touse-regex-close-btn img {
@@ -412,7 +422,164 @@ body {
 }
 
 /* Course Configurator Section Styles */
-  /* Pending */
+#course-configurator-global-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-top: var(--space-xxs);
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  gap: 2rem;
+}
+
+#add-course-btn-container button {
+  background-color: var(--primary-color);
+  border-radius: var(--btn-border-radius);
+  border-color: var(--border-color);
+  border-width: 2px;
+  border-style: solid;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  cursor: pointer;
+  font-size: var(--font-size-btn);
+  color: var(--text-color);
+  line-height: var(--line-height-body);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  transition: all 200ms ease;
+}
+
+#add-course-btn-container button:hover {
+  background-color: var(--primary-color-shade);
+  transform: scale(1.02);
+}
+
+#add-course-btn-container button:active {
+  background-color: var(--primary-color-tint);
+  transform: scale(0.97);
+}
+
+
+#course-configurator-editor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 5%;
+}
+
+#course-configurator-input-box-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  gap: var(--space-md);
+}
+
+#course-configurator-input-box-container label {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+}
+
+#course-configurator-input-box-container input,
+#course-configurator-input-box-container select {
+  padding: 0.8rem 1rem;
+  font-size: var(--font-size-p);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-radius: var(--btn-border-radius);
+  width: 100%;
+}
+
+#course-configurator-input-box-container input:focus,
+#course-configurator-input-box-container select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#course-configurator-modifiers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  width: 80%;
+  height: auto;
+  max-width: 500px;
+  padding: var(--space-md);
+  background-color: var(--secondary-color-tint);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+#course-configurator-days-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+#course-configurator-days-checkbox-title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-sm);
+}
+
+#course-configurator-days-checkbox-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+#course-configurator-days-checkbox-options-container label {
+  font-size: var(--font-size-p);
+  cursor: default;
+}
+
+#course-configurator-days-checkbox-options-container input[type="checkbox"] {
+  width: 2.4rem;
+  height: 2.4rem;
+  accent-color: var(--primary-color);
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#course-configurator-days-checkbox-options-container input[type="checkbox"]:hover {
+  transform: scale(1.3);
+}
+
+#course-configurator-color-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+#color-picker-selector {
+  width: 8rem;
+  height: 3.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* Espacio entre checkbox y texto */
+  width: 100%;
+  justify-content: space-between;
+  margin: 0.2rem 0;
+}
 
 /* Schedule Configurator Section Styles */
   /* Pending */
@@ -436,6 +603,10 @@ body {
 @media (min-width: 64rem) {
   body {
     font-size: 1.8rem;
+  }
+
+  #course-configurator-editor-container {
+    flex-direction: row;
   }
 }
 
