@@ -13,24 +13,23 @@
 <body>
   <header class="container">
     <div class="header-logo-container">
-      <img id="site-logo" src="src/assets/logo.svg" alt="Logo del sitio" role="img" />
-
-      <h1 id="main-page-title">Generador de horarios - UCR</h1>
+      <h1 id="main-page-title">Generador de horarios</h1>
     </div>
 
     <nav class="nav-menu-container" role="navigation" aria-label="Menú principal">
-      <button 
-        class="menu-toggle-btn"
-        id="nav-list-content-toggle-btn"
-        aria-haspopup="true"
-        aria-expanded="false"
-        aria-controls="nav-list-content"
-        aria-label="Mostrar u ocultar menú principal"
-      >
-        <img src="src/assets/menu-toggle.svg" alt="Botón de acceso a menú" role="img" />
-      </button>
+      <div>
+        <button 
+          id="nav-list-content-toggle-btn"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="nav-list-content"
+          aria-label="Mostrar u ocultar menú principal"
+        >
+          Menú
+        </button>
+      </div>
       
-      <div class="nav-list-container" id="nav-list-content">
+      <div class="nav-list-container hidden" id="nav-list-content">
         <ul role="menubar" aria-label="Menú principal">
           <li role="none">
             <button role="menuitem" class="nav-list-btn" id="reset-schedule-btn" tabindex="0">
@@ -39,148 +38,159 @@
           </li>
           
           <li role="none">
-            <button 
-              class="nav-list-btn"
-              id="save-schedule-submenu-toggle-btn" 
-              aria-haspopup="true" 
-              aria-expanded="false" 
-              aria-controls="save-schedule-submenu"
-              role="menuitem"
-              tabindex="0"
-            >
-              Guardar horario
-            </button>
-            <div class="nav-submenu-modal" id="save-schedule-submenu" role="menu" hidden>
-              <ul class="nav-submenu-list">
-                <li role="none">
-                  <button role="menuitem" class="nav-list-btn nav-submenu-btn" id="save-schedule-as-pdf-btn" tabindex="-1">
-                    Guardar como PDF
-                  </button>
-                </li>
-                <li role="none">
-                  <button role="menuitem" class="nav-list-btn nav-submenu-btn" id="save-schedule-as-image-btn" tabindex="-1">
-                    Guardar como imagen
-                  </button>
-                </li>
-              </ul>
+            <div class="nav-submenu" id="save-schedule-submenu" role="menu">
+              <button 
+                class="nav-list-btn"
+                id="save-schedule-submenu-toggle-btn" 
+                aria-haspopup="true" 
+                aria-expanded="false" 
+                aria-controls="save-schedule-as-file-submenu"
+                role="menuitem"
+                tabindex="0"
+              >
+                Guardar horario
+              </button>
+              <div class="hidden" id="save-schedule-as-file-submenu" role="menu">
+                <ul class="nav-submenu-list">
+                  <li role="none">
+                    <button role="menuitem" class="nav-list-btn nav-submenu-btn" id="save-schedule-as-pdf-btn" tabindex="-1">
+                      Guardar como PDF
+                    </button>
+                  </li>
+                  <li role="none">
+                    <button role="menuitem" class="nav-list-btn nav-submenu-btn" id="save-schedule-as-image-btn" tabindex="-1">
+                      Guardar como imagen
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
           
           <li role="none">
-            <button
-              class="nav-list-btn"
-              id="how-to-use-regex-container-toggle-btn"
-              aria-haspopup="true"
-              aria-expanded="false"
-              aria-controls="how-to-use-regex-container"
-              role="menuitem"
-              tabindex="0"
-            >
+            <div class="nav-submenu" id="how-to-use-regex-submenu" role="menu">
+              <button
+                class="nav-list-btn"
+                id="how-to-use-regex-container-toggle-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="how-to-use-regex-container"
+                role="menuitem"
+                tabindex="0"
+              >
                 Cómo utilizar expresión horaria
-            </button>
-            <div class="nav-submenu-modal" id="how-to-use-regex-container" role="menu" hidden>
-              <h2 id="how-to-use-regex-title">Cómo utilizar <span id="nav-submenu-modal-regex-handle">Expresión regular</span></h2>
-              <img src="src/assets/example-of-where-to-get-regex-expressions.png" alt="Ejemplo de origen de expresión regular en informe de matrícula" role="img" width="200px">
-              <p role="text" id="how-to-use-regex-description">
-                Las expresiones siguen un patrón singular que se debe cumplir estrictamente. 
-                Una expresión regular establece reglas para las horas en que se realizan actividades.
-                <br><br>
-                Ej. Si hay una actividad el viernes (V) entre las 14:00 y 15:50, entonces una expresión regular
-                válida para esa actividad sería: <span id="how-to-use-regex-activity-regex-handle">[V 14:00 - 15:50]</span>
-                <br><br>
-                El formato de una expresión regular es:
-                [(Día) (Hora inicial) - (Hora final), (Día) (Hora inicial) - (Hora final)]
-                <br>
-                Se deben poner los corchetes al inicio y final, poner el guión entre los digitos, y el espacio después del día.
-                <br>
-                Para agregar más de un intervalo, se agrega una coma después de la hora final del intervalo anterior y se sigue el mismo patrón.
-                <br>
-                <br>Los días válidos son:
-                <br>L - Lunes
-                <br>K - Martess
-                <br>M - Miércoles
-                <br>J - Jueves
-                <br>V - Viernes
-                <br>S - Sábado
-                <br>D - Domingo
-                <br><br>
-                Si usted tiene un informe de matrícula en <span id="how-to-use-regex-ematricula-handle">ematrícula</span>, puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione.
-              </p>
+              </button>
             </div>
           </li>
 
           <li role="none">
-            <button 
-              class="nav-list-btn"
-              id="page-theme-selector-container-toggle-btn"
-              aria-haspopup="true"
-              aria-expanded="false"
-              aria-controls="page-theme-selector-container"
-              role="menuitem"
-              tabindex="0"
-            >
-              Cambiar tema
-            </button>
-            <div class="nav-submenu-modal" id="page-theme-selector-container" role="menu" hidden>
-              <ul class="nav-submenu-list">
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="default-theme-btn" role="menuitem" tabindex="-1">Default</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="dark-theme-btn" role="menuitem" tabindex="-1">Oscuro</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="light-theme-btn" role="menuitem" tabindex="-1">Claro</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="gray-theme-btn" role="menuitem" tabindex="-1">Gris</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="arctic-theme-btn" role="menuitem" tabindex="-1">Ártico</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="matrix-theme-btn" role="menuitem" tabindex="-1">Matrix</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="cutesy-theme-btn" role="menuitem" tabindex="-1">Cutesy</button>
-                </li>
-              </ul>
+            <div class="nav-submenu" id="change-page-theme-submenu" role="menu">
+              <button 
+                class="nav-list-btn"
+                id="page-theme-selector-container-toggle-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="page-theme-selector-container"
+                role="menuitem"
+                tabindex="0"
+              >
+                Cambiar tema
+              </button>
+              <div class="hidden" id="page-theme-selector-container" role="menu">
+                <ul class="nav-submenu-list">
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn theme-selector" id="default-theme-btn" role="menuitem" tabindex="-1" value="default">Predeterminado</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn theme-selector" id="light-theme-btn" role="menuitem" tabindex="-1" value="light">Claro</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn theme-selector" id="dark-theme-btn" role="menuitem" tabindex="-1" value="dark">Oscuro</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn theme-selector" id="gray-theme-btn" role="menuitem" tabindex="-1" value="gray">Gris</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn theme-selector" id="arctic-theme-btn" role="menuitem" tabindex="-1" value="arctic">Ártico</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn theme-selector" id="matrix-theme-btn" role="menuitem" tabindex="-1" value="matrix">Matrix</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn theme-selector" id="cutesy-theme-btn" role="menuitem" tabindex="-1" value="cutesy">Cutesy</button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
 
           <li role="none">
-            <button 
-              class="nav-list-btn"
-              id="page-language-selector-container-toggle-btn"
-              aria-haspopup="true"
-              aria-expanded="false"
-              aria-controls="page-language-selector-container"
-              role="menuitem"
-              tabindex="0"
-            >
-              Cambiar idioma
-            </button>
-            <div class="nav-submenu-modal" id="page-language-selector-container" role="menu" hidden>
-              <ul class="nav-submenu-list">
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="spanish-language-option-btn" role="menuitem" tabindex="-1">Español</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="english-language-option-btn" role="menuitem" tabindex="-1">Inglés</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="portuguese-language-option-btn" role="menuitem" tabindex="-1">Portugués</button>
-                </li>
-                <li role="none">
-                  <button class="nav-list-btn nav-submenu-btn" id="french-language-option-btn" role="menuitem" tabindex="-1">Francés</button>
-                </li>
-              </ul>
+            <div class="nav-submenu" id="change-language-submenu" role="menu">
+              <button 
+                class="nav-list-btn"
+                id="page-language-selector-container-toggle-btn"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="page-language-selector-container"
+                role="menuitem"
+                tabindex="0"
+              >
+                Cambiar idioma
+              </button>
+              <div class="hidden" id="page-language-selector-container" role="menu">
+                <ul class="nav-submenu-list">
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn language-selector" id="spanish-language-option-btn" role="menuitem" tabindex="-1">Español</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn language-selector" id="english-language-option-btn" role="menuitem" tabindex="-1">Inglés</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn language-selector" id="portuguese-language-option-btn" role="menuitem" tabindex="-1">Portugués</button>
+                  </li>
+                  <li role="none">
+                    <button class="nav-list-btn nav-submenu-btn language-selector" id="french-language-option-btn" role="menuitem" tabindex="-1">Francés</button>
+                  </li>
+                </ul>
+              </div>
             </div>
+
           </li>
+
         </ul>
       </div>
     </nav>
   </header>
+  <div class="hidden" id="how-to-use-regex-container" role="menu">
+    <h2 id="how-to-use-regex-title">Cómo utilizar <span id="nav-submenu-modal-regex-handle">Expresión regular</span></h2>
+    <img src="src/assets/example-of-where-to-get-regex-expressions.png" alt="Ejemplo de origen de expresión regular en informe de matrícula" role="img" width="200px">
+    <p role="text" id="how-to-use-regex-description">
+      Las expresiones siguen un patrón singular que se debe cumplir estrictamente. 
+      Una expresión regular establece reglas para las horas en que se realizan actividades.
+      <br><br>
+      Ej. Si hay una actividad el viernes (V) entre las 14:00 y 15:50, entonces una expresión regular
+      válida para esa actividad sería: <span id="how-to-use-regex-activity-regex-handle">[V 14:00 - 15:50]</span>
+      <br><br>
+      El formato de una expresión regular es:
+      [(Día) (Hora inicial) - (Hora final), (Día) (Hora inicial) - (Hora final)]
+      <br>
+      Se deben poner los corchetes al inicio y final, poner el guión entre los digitos, y el espacio después del día.
+      <br>
+      Para agregar más de un intervalo, se agrega una coma después de la hora final del intervalo anterior y se sigue el mismo patrón.
+      <br>
+      <br>Los días válidos son:
+      <br>L - Lunes
+      <br>K - Martess
+      <br>M - Miércoles
+      <br>J - Jueves
+      <br>V - Viernes
+      <br>S - Sábado
+      <br>D - Domingo
+      <br><br>
+      Si usted tiene un informe de matrícula en <span id="how-to-use-regex-ematricula-handle">ematrícula</span>,
+        puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione.
+    </p>
+  </div>
   <script src="src/js/main.js" type="module"></script>
 </body>
 </html>

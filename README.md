@@ -2,7 +2,7 @@
 
 A simple and responsive web app to generate and customize schedules using **HTML**, **CSS**, and **JavaScript**.
 
-🔗 **Live Preview:** [Click here to view the project](https://jason-montenegro.github.io/basic-ucr-schedule-generator/)
+🔗 **Live Preview:** [Click here to view the project](https://jason-montenegro.github.io/ucr-schedule-generator/)
 
 ---
 

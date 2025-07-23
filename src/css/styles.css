@@ -172,13 +172,15 @@ html {
   --font-family: "Noto Sans", sans-serif;
 
   /* Font size typescale */
-  --font-size-base: 1.6rem;  /* 16px */
-  --font-size-h1: 3rem;      /* 30px */
-  --font-size-h2: 2.4rem;    /* 24px */
-  --font-size-h3: 1.9rem;    /* 19px */
-  --font-size-h4: 1.5rem;    /* 15px */
-  --font-size-h5: 1.3rem;    /* 13px */
-  --font-size-small: 1.2rem; /* 12px */
+  --font-size-base: 1.6rem; 
+  --font-size-h1: 3rem;     
+  --font-size-h2: 2.4rem;   
+  --font-size-h3: 1.9rem;   
+  --font-size-h4: 1.5rem;   
+  --font-size-h5: 1.3rem;   
+  --font-size-btn: 1.7rem;
+  --font-size-p: 1.5rem;
+  --font-size-small: 1.2rem;
 
   /* Line heights */
   --line-height-heading: 1.2;
@@ -232,24 +234,123 @@ html {
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
-  line-height: var(--line-height-body);
   color: var(--text-color);
   background-color: var(--background-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Layout Styles */
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--container-padding-x);
 }
 
-/* Logo Section Styles */
-  /* Pending */
+/* Header - Logo container */
+.header-logo-container {
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-lg);
+}
 
-/* Navigation Section Styles */
-  /* Pending */
+#main-page-title {
+  font-size: var(--font-size-h1);
+  text-transform: capitalize;
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+/* Header - Nav container */
+.nav-menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+#nav-list-content-toggle-btn {
+  background-color: var(--primary-color);
+  border-radius: var(--btn-border-radius);
+  border-color: var(--border-color);
+  border-style: solid;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-btn);
+  line-height: var(--line-height-body);
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: 200ms;
+}
+
+#nav-list-content-toggle-btn:hover {
+  background-color: var(--primary-color-shade);
+}
+
+#nav-list-content-toggle-btn:active {
+  background-color: var(--primary-color-tint);
+}
+
+.nav-list-container li {
+  list-style: none;
+}
+
+.nav-list-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list-btn {
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-size: var(--font-size-btn);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  line-height: var(--btn-height-md);
+  border-radius: var(--btn-border-radius);
+  border-color: var(--border-color);
+  border-style: solid;
+  transition: 200ms;
+}
+
+.nav-list-btn:hover {
+  background-color: var(--secondary-color-shade);
+}
+
+.nav-list-btn:active {
+  background-color: var(--tertiary-color);
+}
+
+.nav-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.nav-submenu-list .nav-submenu-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-submenu-btn {
+  background-color: var(--tertiary-color);
+  color: var(--text-color-secondary);
+}
 
 /* Course Configurator Section Styles */
   /* Pending */
@@ -277,4 +378,8 @@ body {
   body {
     font-size: 1.8rem;
   }
+}
+
+.hidden {
+  display: none;
 }
