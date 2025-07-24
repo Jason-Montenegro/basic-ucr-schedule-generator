@@ -78,7 +78,7 @@
                 role="menuitem"
                 tabindex="0"
               >
-                Cómo utilizar expresión horaria
+                Cómo utilizar expresión regular
               </button>
             </div>
           </li>
@@ -164,14 +164,14 @@
     <div class="hidden" id="how-to-use-regex-container" role="menu">
     <div id="how-to-use-regex-close-btn-container">
       <button id="how-to-use-regex-close-btn" aria-label="Cerrar ventana">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
           <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
         </svg>
       </button>
     </div>
   
     <div id="how-to-use-regex-content" role="menu">
-      <h2 id="how-to-use-regex-title">Cómo utilizar <span id="nav-submenu-modal-regex-handle">Expresión regular</span></h2>
+      <h2 id="how-to-use-regex-title">Cómo utilizar <span id="nav-submenu-modal-regex-handle">expresión regular</span></h2>
       <img src="src/assets/example-of-where-to-get-regex-expressions.png" alt="Ejemplo de origen de expresión regular en informe de matrícula" role="img">
       <p role="text" id="how-to-use-regex-description">
         Las expresiones siguen un patrón singular que se debe cumplir estrictamente. 
@@ -211,7 +211,7 @@
             <input type="text" id="course-name-input" name="course-name" placeholder="Cálculo 1...">
           </div>
           <div>
-            <label for="course-regex-input">Expresión horaria</label>
+            <label for="course-regex-input">Expresión regular</label>
             <input type="text" id="course-regex-input" name="course-regex" placeholder="[J 13:00 - 14:50, L 13:00 - 15:50]">
           </div>
           <div>
@@ -297,7 +297,9 @@
     <section id="schedule-configurator-global-container">
       <div class="schedule-configurator-toggle-container">
         <button id="schedule-configurator-toggle-btn" aria-label="Cerrar ventana">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/></svg>
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+            <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/>
+          </svg>
         </button>
       </div>
       <div class="input-box hidden" id="schedule-configurator-modifiers-container">
@@ -342,6 +344,178 @@
       </div>
     </section>
 
+    <section id="schedule-grid">
+      <div class="schedule-hour schedule-cell-global">Horas</div>
+      <div class="schedule-head schedule-cell-global">Lunes</div>
+      <div class="schedule-head schedule-cell-global">Martes</div>
+      <div class="schedule-head schedule-cell-global">Miércoles</div>
+      <div class="schedule-head schedule-cell-global">Jueves</div>
+      <div class="schedule-head schedule-cell-global">Viernes</div>
+      <div class="schedule-head schedule-cell-global">Sábado</div>
+      <div class="schedule-head schedule-cell-global">Domingo</div>
+
+      <!-- <div class="schedule-hour schedule-cell-global">5:00 - 5:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">Cálculo</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+
+      <div class="schedule-hour schedule-cell-global">6:00 - 6:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">Calculo</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+
+      <div class="schedule-hour schedule-cell-global">7:00 - 7:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div>
+      <div class="schedule-cell schedule-cell-global" draggable="true"></div> -->
+
+      <div class="schedule-hour schedule-cell-global">8:00 - 8:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">9:00 - 9:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">10:00 - 10:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">11:00 - 11:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">12:00 - 12:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">13:00 - 13:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">14:00 - 14:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">15:00 - 15:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">16:00 - 16:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <!-- <div class="schedule-hour schedule-cell-global">17:00 - 18:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">18:00 - 18:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">19:00 - 19:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">20:00 - 20:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">21:00 - 21:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+
+      <div class="schedule-hour schedule-cell-global">22:00 - 22:50</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div>
+      <div class="schedule-cell schedule-cell-global" draggable="true">short activity</div> -->
+    </section>
   </main>
   
   <footer class="container">

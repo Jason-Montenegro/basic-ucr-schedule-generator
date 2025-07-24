@@ -253,7 +253,6 @@ body {
 
 /* Header - Logo container */
 .header-logo-container {
-  margin-bottom: var(--space-lg);
   margin-top: var(--space-lg);
 }
 
@@ -438,6 +437,7 @@ body {
   background-color: var(--secondary-color);
   border-radius: 1rem;
   gap: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.302);
 }
 
 #add-course-btn-container button {
@@ -502,6 +502,17 @@ body {
   border-color: var(--border-color);
   border-radius: var(--btn-border-radius);
   width: 100%;
+  transition: transform 200ms ease;
+}
+
+.input-box input:hover,
+.input-box select:hover {
+  transform: scale(1.02);
+}
+
+.input-box input:active,
+.input-box select:active {
+  transform: scale(0.97);
 }
 
 .input-box input:focus,
@@ -568,6 +579,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
+  
 }
 
 #color-picker-selector {
@@ -575,6 +587,11 @@ body {
   height: 3.6rem;
   border: none;
   cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+#color-picker-selector:hover {
+  transform: scale(1.02);
 }
 
 .checkbox-item {
@@ -601,7 +618,6 @@ body {
   align-items: center;
   border: none;
   background: transparent;
-  color: var(--tertiary-color);
   transform: scale(1.2);
   cursor: pointer;
   padding: 0.5rem;
@@ -643,8 +659,84 @@ body {
   gap: var(--space-sm);
 }
 
-/* Schedule Table Section Styles */
-  /* Pending */
+/* Schedule Table Section Styles  */
+#schedule-grid {
+  display: grid;
+  grid-template-columns: 8rem repeat(7, minmax(10rem, 1fr));
+  grid-auto-rows: minmax(4rem, auto);
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: var(--border-color);
+  overflow-x: auto;
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.302);
+}
+
+.schedule-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--secondary-color-shade);
+  padding: var(--space-sm);
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: var(--border-color);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.schedule-hour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--secondary-color-tint);
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: var(--border-color);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.schedule-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: var(--border-color);
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.schedule-head {
+  font-size: var(--font-size-h3);
+}
+
+.schedule-hour, .schedule-cell {
+  font-size: var(--font-size-p);
+}
+
+.schedule-cell-global {
+  transition: transform 200ms ease;
+}
+
+.schedule-cell-global:hover {
+  transform: scale(1.03);
+}
+
+.schedule-cell-global:active {
+  transform: scale(0.97);
+}
 
 /* Footer Elements Styles */
 #copyright-line-container {
@@ -671,17 +763,25 @@ body {
   color: var(--text-color);
 }
 
-/* Media Queries */
+/* Special styles */
+.icon {
+  fill: var(--tertiary-color);
+}
 
-/* Tablets */
+.hidden {
+  display: none !important;
+}
+
+/* Media Queries */
 @media (min-width: 48rem) {
+  /* Tablets */
   body {
     font-size: 1.7rem;
   }
 }
 
-/* Desktop */
 @media (min-width: 64rem) {
+  /* Desktop */
   body {
     font-size: 1.8rem;
   }
@@ -693,8 +793,4 @@ body {
   #schedule-configurator-modifiers-container {
     flex-direction: row;
   }
-}
-
-.hidden {
-  display: none !important;
 }
