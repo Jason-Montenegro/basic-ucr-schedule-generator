@@ -1,0 +1,69 @@
+{
+  "page-tab-title": "Generador de horarios - UCR",
+  "main-page-title": "Generador de horarios",
+  
+  "nav-bar-toggle-btn-text": "Menú",
+  "restore-schedule-to-default-btn-text": "Limpiar horario",
+  "save-schedule-as-file-btn-text": "Guardar horario",
+  "save-schedule-as-pdf-btn-text": "Guardar como PDF",
+  "save-schedule-as-image-btn-text": "Guardar como imagen",
+  "how-to-use-regex-container-toggle-btn-text": "Cómo utilizar expresión regular",
+
+  "change-page-theme-submenu-toggle-btn-text": "Cambiar tema",
+  "page-theme-option-default-text": "Predeterminado ⚙️",
+  "page-theme-option-light-text": "Claro ☀️",
+  "page-theme-option-dark-text": "Oscuro 🌑",
+  "page-theme-option-matrix-text": "Matrix 🟩",
+  "page-theme-option-arctic-text": "Ártico ❄️",
+  "page-theme-option-cutesy-text": "Cutesy 🐰",
+  "page-theme-option-solaris-text": "Solaris 🌅",
+  "page-theme-option-nebula-text": "Nebula 🌌",
+  "page-theme-option-tropical-text": "Tropical 🌴",
+
+  "change-page-language-submenu-toggle-btn-text": "Cambiar idioma",
+  "page-language-option-spanish-text": "Español 🇪🇸",
+  "page-language-option-english-text": "Inglés 🇺🇸",
+  "page-language-option-portuguese-text": "Portugués 🇧🇷",
+  "page-language-option-french-text": "Francés 🇫🇷",
+
+  "how-to-use-regex-content-title": "Cómo utilizar <span id=\"nav-submenu-modal-regex-handle\">expresión regular</span>",
+  "how-to-use-regex-content-paragraph-text": "Las expresiones siguen un patrón singular que se debe cumplir estrictamente. Una expresión regular establece reglas para las horas en que se realizan actividades.<br><br>Ej. Si hay una actividad el viernes (V) entre las 14:00 y 15:50, entonces una expresión regular válida para esa actividad sería: <br><br><span id=\"how-to-use-regex-activity-regex-handle\">[V 14:00 - 15:50]</span><br><br>El formato de una expresión regular es:[(Día) (Hora inicial) - (Hora final), (Día) (Hora inicial) - (Hora final)]<br><br>Se deben poner los corchetes al inicio y final, poner el guión entre los digitos, y el espacio después del día.<br><br>Para agregar más de un intervalo, se agrega una coma después de la hora final del intervalo anterior y se sigue el mismo patrón.<br><br>Los días válidos son:<br>L - Lunes<br>K - Martes<br>M - Miércoles<br>J - Jueves<br>V - Viernes<br>S - Sábado<br>D - Domingo<br><br>Si usted tiene un informe de matrícula en <span id=\"how-to-use-regex-ematricula-handle\">ematrícula</span>, puede copiar y pegar el horario en la expresión regular. Debe eliminar el aula y edificio de la expresión para que funcione correctamente.",
+
+  "course-setting-name-label-text": "Nombre de curso",
+
+  "course-setting-regex-label-text": "Expresión regular",
+
+  "course-setting-start-time-label-text": "Hora inicial",
+  "course-setting-start-time-option-default-text": "Selección...",
+  "course-setting-end-time-label-text": "Hora final",
+  "course-setting-end-time-option-default-text": "Selección...",
+
+  "course-setting-modifier-days-title": "Días de la semana",
+  "course-setting-modifier-day-option-monday-text": "Lunes",
+  "course-setting-modifier-day-option-tuesday-text": "Martes",
+  "course-setting-modifier-day-option-wednesday-text": "Miércoles",
+  "course-setting-modifier-day-option-thursday-text": "Jueves",
+  "course-setting-modifier-day-option-friday-text": "Viernes",
+  "course-setting-modifier-day-option-saturday-text": "Sábado",
+  "course-setting-modifier-day-option-sunday-text": "Domingo",
+
+  "course-setting-modifier-color-picker-title": "Selecciona un color",
+
+  "add-course-to-schedule-btn-text": "Agregar curso",
+
+  "schedule-settings-time-intervals-title": "Intervalos de horas en horario",
+  "schedule-settings-time-intervals-start-time-label-text": "Hora inicial",
+  "schedule-settings-time-intervals-end-time-label-text": "Hora final",
+
+  "schedule-grid-heading-hours-title": "Horas",
+  "schedule-grid-heading-monday-title": "Lunes",
+  "schedule-grid-heading-tuesday-title": "Martes",
+  "schedule-grid-heading-wednesday-title": "Miércoles",
+  "schedule-grid-heading-thursday-title": "Jueves",
+  "schedule-grid-heading-friday-title": "Viernes",
+  "schedule-grid-heading-saturday-title": "Sábado",
+  "schedule-grid-heading-sunday-title": "Domingo",
+
+  "footer-copyright-text": "&copy; 2025 Jason Montenegro. Todos los derechos reservados.",
+  "footer-repository-link-text": "🚀 Repositorio del proyecto en GitHub"
+}

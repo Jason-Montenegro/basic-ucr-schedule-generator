@@ -1,0 +1,66 @@
+{
+  "page-tab-title": "Générateur d'horaires - UCR",
+  "main-page-title": "Générateur d'horaires",
+
+  "nav-bar-toggle-btn-text": "Menu",
+  "restore-schedule-to-default-btn-text": "Effacer l'horaire",
+  "save-schedule-as-file-btn-text": "Enregistrer l'horaire",
+  "save-schedule-as-pdf-btn-text": "Enregistrer en PDF",
+  "save-schedule-as-image-btn-text": "Enregistrer en image",
+  "how-to-use-regex-container-toggle-btn-text": "Comment utiliser une expression régulière",
+
+  "change-page-theme-submenu-toggle-btn-text": "Changer le thème",
+  "page-theme-option-default-text": "Par défaut ⚙️",
+  "page-theme-option-light-text": "Clair ☀️",
+  "page-theme-option-dark-text": "Sombre 🌑",
+  "page-theme-option-matrix-text": "Matrix 🟩",
+  "page-theme-option-arctic-text": "Arctique ❄️",
+  "page-theme-option-cutesy-text": "Mignon 🐰",
+  "page-theme-option-solaris-text": "Solaris 🌅",
+  "page-theme-option-nebula-text": "Nébuleuse 🌌",
+  "page-theme-option-tropical-text": "Tropical 🌴",
+
+  "change-page-language-submenu-toggle-btn-text": "Changer la langue",
+  "page-language-option-spanish-text": "Espagnol 🇪🇸",
+  "page-language-option-english-text": "Anglais 🇺🇸",
+  "page-language-option-portuguese-text": "Portugais 🇧🇷",
+  "page-language-option-french-text": "Français 🇫🇷",
+
+  "how-to-use-regex-content-title": "Comment utiliser une <span id=\"nav-submenu-modal-regex-handle\">expression régulière</span>",
+  "how-to-use-regex-content-paragraph-text": "Les expressions suivent un modèle spécifique qui doit être respecté strictement. Une expression régulière définit les règles des horaires des activités.<br><br>Exemple : S'il y a une activité le vendredi (V) entre 14:00 et 15:50, alors une expression régulière valide serait :<br><br><span id=\"how-to-use-regex-activity-regex-handle\">[V 14:00 - 15:50]</span><br><br>Le format d'une expression régulière est :[(Jour) (Heure de début) - (Heure de fin), (Jour) (Heure de début) - (Heure de fin)]<br><br>Il faut inclure des crochets au début et à la fin, un tiret entre les chiffres et un espace après le jour.<br><br>Pour ajouter plus d'un intervalle, ajoutez une virgule après l'heure de fin précédente et continuez le même modèle.<br><br>Jours valides :<br>L - Lundi<br>M - Mardi<br>M - Mercredi<br>J - Jeudi<br>V - Vendredi<br>S - Samedi<br>D - Dimanche<br><br>Si vous avez un rapport d'inscription dans <span id=\"how-to-use-regex-ematricula-handle\">ematrícula</span>, vous pouvez copier et coller l'horaire dans l'expression régulière. Il faut retirer la salle et le bâtiment pour que cela fonctionne correctement.",
+
+  "course-setting-name-label-text": "Nom du cours",
+  "course-setting-regex-label-text": "Expression régulière",
+  "course-setting-start-time-label-text": "Heure de début",
+  "course-setting-start-time-option-default-text": "Sélection...",
+  "course-setting-end-time-label-text": "Heure de fin",
+  "course-setting-end-time-option-default-text": "Sélection...",
+
+  "course-setting-modifier-days-title": "Jours de la semaine",
+  "course-setting-modifier-day-option-monday-text": "Lundi",
+  "course-setting-modifier-day-option-tuesday-text": "Mardi",
+  "course-setting-modifier-day-option-wednesday-text": "Mercredi",
+  "course-setting-modifier-day-option-thursday-text": "Jeudi",
+  "course-setting-modifier-day-option-friday-text": "Vendredi",
+  "course-setting-modifier-day-option-saturday-text": "Samedi",
+  "course-setting-modifier-day-option-sunday-text": "Dimanche",
+
+  "course-setting-modifier-color-picker-title": "Choisir une couleur",
+  "add-course-to-schedule-btn-text": "Ajouter un cours",
+
+  "schedule-settings-time-intervals-title": "Intervalles horaires",
+  "schedule-settings-time-intervals-start-time-label-text": "Heure de début",
+  "schedule-settings-time-intervals-end-time-label-text": "Heure de fin",
+
+  "schedule-grid-heading-hours-title": "Heures",
+  "schedule-grid-heading-monday-title": "Lundi",
+  "schedule-grid-heading-tuesday-title": "Mardi",
+  "schedule-grid-heading-wednesday-title": "Mercredi",
+  "schedule-grid-heading-thursday-title": "Jeudi",
+  "schedule-grid-heading-friday-title": "Vendredi",
+  "schedule-grid-heading-saturday-title": "Samedi",
+  "schedule-grid-heading-sunday-title": "Dimanche",
+
+  "footer-copyright-text": "&copy; 2025 Jason Montenegro. Tous droits réservés.",
+  "footer-repository-link-text": "🚀 Dépôt du projet sur GitHub"
+}

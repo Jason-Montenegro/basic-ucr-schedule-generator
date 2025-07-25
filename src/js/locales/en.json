@@ -1,0 +1,66 @@
+{
+  "page-tab-title": "Schedule Generator - UCR",
+  "main-page-title": "Schedule Generator",
+
+  "nav-bar-toggle-btn-text": "Menu",
+  "restore-schedule-to-default-btn-text": "Clear schedule",
+  "save-schedule-as-file-btn-text": "Save schedule",
+  "save-schedule-as-pdf-btn-text": "Save as PDF",
+  "save-schedule-as-image-btn-text": "Save as image",
+  "how-to-use-regex-container-toggle-btn-text": "How to use regular expression",
+
+  "change-page-theme-submenu-toggle-btn-text": "Change theme",
+  "page-theme-option-default-text": "Default ⚙️",
+  "page-theme-option-light-text": "Light ☀️",
+  "page-theme-option-dark-text": "Dark 🌑",
+  "page-theme-option-matrix-text": "Matrix 🟩",
+  "page-theme-option-arctic-text": "Arctic ❄️",
+  "page-theme-option-cutesy-text": "Cutesy 🐰",
+  "page-theme-option-solaris-text": "Solaris 🌅",
+  "page-theme-option-nebula-text": "Nebula 🌌",
+  "page-theme-option-tropical-text": "Tropical 🌴",
+
+  "change-page-language-submenu-toggle-btn-text": "Change language",
+  "page-language-option-spanish-text": "Spanish 🇪🇸",
+  "page-language-option-english-text": "English 🇺🇸",
+  "page-language-option-portuguese-text": "Portuguese 🇧🇷",
+  "page-language-option-french-text": "French 🇫🇷",
+
+  "how-to-use-regex-content-title": "How to use <span id=\"nav-submenu-modal-regex-handle\">regular expression</span>",
+  "how-to-use-regex-content-paragraph-text": "Expressions follow a specific pattern that must be strictly followed. A regular expression sets rules for the times when activities take place.<br><br>Example: If there is an activity on Friday (F) between 14:00 and 15:50, then a valid regular expression for that activity would be:<br><br><span id=\"how-to-use-regex-activity-regex-handle\">[F 14:00 - 15:50]</span><br><br>The format of a regular expression is:[(Day) (Start time) - (End time), (Day) (Start time) - (End time)]<br><br>You must include brackets at the beginning and end, a dash between digits, and a space after the day.<br><br>To add more than one interval, add a comma after the previous end time and continue the same pattern.<br><br>Valid days are:<br>M - Monday<br>T - Tuesday<br>W - Wednesday<br>Th - Thursday<br>F - Friday<br>S - Saturday<br>Su - Sunday<br><br>If you have an enrollment report in <span id=\"how-to-use-regex-ematricula-handle\">ematrícula</span>, you can copy and paste the schedule into the regular expression. You must remove the classroom and building for it to work correctly.",
+
+  "course-setting-name-label-text": "Course name",
+  "course-setting-regex-label-text": "Regular expression",
+  "course-setting-start-time-label-text": "Start time",
+  "course-setting-start-time-option-default-text": "Select...",
+  "course-setting-end-time-label-text": "End time",
+  "course-setting-end-time-option-default-text": "Select...",
+
+  "course-setting-modifier-days-title": "Days of the week",
+  "course-setting-modifier-day-option-monday-text": "Monday",
+  "course-setting-modifier-day-option-tuesday-text": "Tuesday",
+  "course-setting-modifier-day-option-wednesday-text": "Wednesday",
+  "course-setting-modifier-day-option-thursday-text": "Thursday",
+  "course-setting-modifier-day-option-friday-text": "Friday",
+  "course-setting-modifier-day-option-saturday-text": "Saturday",
+  "course-setting-modifier-day-option-sunday-text": "Sunday",
+
+  "course-setting-modifier-color-picker-title": "Pick a color",
+  "add-course-to-schedule-btn-text": "Add course",
+
+  "schedule-settings-time-intervals-title": "Time intervals in schedule",
+  "schedule-settings-time-intervals-start-time-label-text": "Start time",
+  "schedule-settings-time-intervals-end-time-label-text": "End time",
+
+  "schedule-grid-heading-hours-title": "Hours",
+  "schedule-grid-heading-monday-title": "Monday",
+  "schedule-grid-heading-tuesday-title": "Tuesday",
+  "schedule-grid-heading-wednesday-title": "Wednesday",
+  "schedule-grid-heading-thursday-title": "Thursday",
+  "schedule-grid-heading-friday-title": "Friday",
+  "schedule-grid-heading-saturday-title": "Saturday",
+  "schedule-grid-heading-sunday-title": "Sunday",
+
+  "footer-copyright-text": "&copy; 2025 Jason Montenegro. All rights reserved.",
+  "footer-repository-link-text": "🚀 Project repository on GitHub"
+}
