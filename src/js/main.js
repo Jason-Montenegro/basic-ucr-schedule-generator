@@ -1,5 +1,5 @@
-import languageManager from "./languageManager.js";
+import languageManager from "./site-languages/languageManager.js"
 
 document.addEventListener('DOMContentLoaded', () => {
-    languageManager.updateLanguage();
+  languageManager.updateLanguageTranslations();
 });
