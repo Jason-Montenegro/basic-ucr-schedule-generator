@@ -12,7 +12,7 @@
  * - French
  */
 class LanguageManager {
-  static #DEFAULT_LOCALE_PATH = "./src/js/site-languages/locales";
+  static #DEFAULT_LOCALE_PATH = "./src/js/siteLanguages/locales";
   static #LANG_ATTRIBUTE = "lang";
   static #HTML_LANGUAGE_TRANSLATION_ATTRIBUTE = "data-i18n";
   static #BROWSER_LANG = navigator.language.split("-")[0];
@@ -54,6 +54,15 @@ class LanguageManager {
    */
   get LANGUAGES() {
     return LanguageManager.#LANGUAGES;
+  }
+
+  /**
+   * @brief Accesor to html language translation attribute.
+   * 
+   * @return Language translation attribute.
+   */
+  get HTML_LANGUAGE_TRANSLATION_ATTRIBUTE() {
+    return LanguageManager.#HTML_LANGUAGE_TRANSLATION_ATTRIBUTE;
   }
 
   /**

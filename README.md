@@ -22,7 +22,12 @@ A simple and responsive web app to generate and customize schedules using **HTML
 ---
 
 ## 🖥️ **Preview**
-![Preview Screenshot](https://www.svgrepo.com/show/340812/pending.svg)
+### ✨ **Examples of the current color themes and languages available**
+![Preview Screenshot](./src/assets/main-page-default-theme-spanish-preview.png)
+![Preview Screenshot](./src/assets/main-page-solaris-theme-english-preview.png)
+![Preview Screenshot](./src/assets/main-page-tropical-theme-portuguese-preview.png)
+![Preview Screenshot](./src/assets/main-page-cutesy-theme-french-preview.png)
+
 
 ---
 

@@ -1,6 +1,6 @@
 /// Copyright 2025 Jason Montenegro <jasonmontenegro49@gmail.com>
 
-import languageManager from "./languageManager.js";
+import languageManager from "./LanguageManager.js";
 
 describe("Setting languages module.", () => {
   test("Allow language change to spanish.", () => {

@@ -1,37 +1,21 @@
 /// Copyright 2025 Jason Montenegro <jasonmontenegro49@gmail.com>
 
-import * as SELECTORS from "../selectors.js";
+import * as DOM_SELECTORS from "./selectors.js";
 
 /**
- * ListenerManager
+ * EventsListener
  * 
- * @brief Abstract class that defines an interface for subclasses that manage event listeners. 
+ * @brief Class reponsible for adding event listeners to objects, using IDs.
  */
-export default class ListenerManager {
-  static #DOM_SELECTORS = SELECTORS;
-  static #EVENT_TYPES = Object.freeze({
+export default class EventsListener {
+  static EVENT_TYPES = Object.freeze({
     CLICK: "click"
   });
 
-    /**
-   * @brief Abstract constructor. Shall not be invoked.
-   * 
-   * @throws Error due to being a virtual constructor.
-   */
-  constructor() {
-    if (new.target === ListenerManager) {
-      throw new Error("ListenerManager is an abstract class and cannot be instantiated directly.");
-    }
-  }
-
   /**
-   * @brief Accesor to DOM selectors.
-   * 
-   * @returns DOM selectors.
+   * @brief Empty constructor.
    */
-  get DOM_SELECTORS() {
-    return ListenerManager.#DOM_SELECTORS;
-  }
+  constructor() { }
 
   /**
    * @brief Accesor to DOM selectors.
@@ -39,17 +23,7 @@ export default class ListenerManager {
    * @returns DOM selectors.
    */
   get EVENT_TYPES() {
-    return ListenerManager.#EVENT_TYPES;
-  }
-
-  /**
-   * @brief Abstract method. Shall not be invoked
-   * Implementations should initialize event listeners for DOM elements.
-   * 
-   * @throws Error due to being a virtual method.
-   */
-  initializeListeners() {
-    throw new Error("initializeListeners is a pure virtual method, and should be implemented in all subclasses.");
+    return EventsListener.EVENT_TYPES;
   }
 
   /**
@@ -60,12 +34,12 @@ export default class ListenerManager {
    * @param {string} actionerElementId Actioner element CSS id.
    * @param {string} receiverElementId Receiver element CSS id.
    */
-  addToggleHiddenClassEvent(eventType, actionerElementId, receiverElementId) {
-    if (typeof(eventType) === "string" && typeof(actionerElementId) === "string" && typeof(receiverElementId) === "string") {
+  static addToggleHiddenClassEvent(eventType, actionerElementId, receiverElementId) {
+    if (EventsListener.validStringArguments(eventType, actionerElementId, receiverElementId)) {
       const actionerElement = document.getElementById(actionerElementId);
       const receiverElement = document.getElementById(receiverElementId);
       actionerElement.addEventListener(eventType, () => {
-        receiverElement.classList.toggle(this.DOM_SELECTORS.HIDDEN_STYLE_CLASS_NAME);
+        receiverElement.classList.toggle(DOM_SELECTORS.HIDDEN_STYLE_CLASS_NAME);
       });
     }
   }
@@ -80,12 +54,8 @@ export default class ListenerManager {
   * @param {string} actionerElementId Actioner element CSS id.
   * @param {string} receiverElementId Receiver element CSS id.
   */
-  addAttributeSettingEvent(eventType, attributeName, attributeValue, actionerElementId, receiverElementId) {
-    if (typeof(eventType) === "string"
-      && typeof(actionerElementId) === "string"
-      && typeof(receiverElementId) === "string"
-      && typeof(attributeName) == "string"
-      && typeof(attributeValue) === "string") {
+  static addAttributeSettingEvent(eventType, attributeName, attributeValue, actionerElementId, receiverElementId) {
+    if (EventsListener.validStringArguments(eventType, actionerElementId, receiverElementId, attributeName, attributeValue)) {
       const actionerElement = document.getElementById(actionerElementId);
       const receiverElement = document.getElementById(receiverElementId);
       actionerElement.addEventListener(eventType, () => {
@@ -103,8 +73,8 @@ export default class ListenerManager {
    * @param {string} actionerElementId Actioner element CSS id.
    * @param {callbacks} callbacks Function callbacks to execute during the event.
    */
-  addCallbacksEvent(eventType, actionerElementId, ...callbacks) {
-    if (typeof(eventType) === "string" && typeof(actionerElementId) === "string") {
+  static addCallbacksEvent(eventType, actionerElementId, ...callbacks) {
+    if (EventsListener.validStringArguments(eventType, actionerElementId)) {
       const actionerElement = document.getElementById(actionerElementId);
       actionerElement.addEventListener(eventType, () => {
         for (const call of callbacks) {
@@ -112,5 +82,21 @@ export default class ListenerManager {
         }
       });
     }
+  }
+
+  /**
+   * @brief Checks if the arguments are of string type and are not empty.
+   * 
+   * @param  {...string} stringArgs String arguments to check.
+   */
+  static validStringArguments(...stringArgs) {
+    let result = true;
+    for (const arg of stringArgs) {
+      if (typeof(arg) !== "string" || arg.length === 0) {
+        result = false;
+        break;
+      }
+    }
+    return result;
   }
 }
