@@ -4,5 +4,6 @@ import navBar from "./NavBar.js";
 import languageManager from "./siteLanguages/languageManager.js";
 
 document.addEventListener('DOMContentLoaded', () => {
+  languageManager.setLanguageSpecification(languageManager.LANGUAGES.SPANISH);
   languageManager.updateLanguageTranslations();
 });
