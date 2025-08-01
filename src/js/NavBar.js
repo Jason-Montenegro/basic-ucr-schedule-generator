@@ -11,17 +11,26 @@ import SubmenuButton from "./SubmenuButton.js";
  * @brief Nav bar section which holds all buttons related.
  */
 class NavBar {
-  #navSubmenuTogglingButtons = [
-    new SubmenuButton(DOM_SELECTORS.CHANGE_PAGE_THEME_SUBMENU_TOGGLE_BUTTON_ID, DOM_SELECTORS.CHANGE_PAGE_THEME_SUBMENU_ID),
-    new SubmenuButton(DOM_SELECTORS.CHANGE_PAGE_LANGUAGE_SUBMENU_TOGGLE_BUTTON_ID, DOM_SELECTORS.CHANGE_PAGE_LANGUAGE_SUBMENU_ID),
-    new SubmenuButton(DOM_SELECTORS.HOW_TO_USE_REGEX_CONTAINER_TOGGLE_BUTTON_ID, DOM_SELECTORS.HOW_TO_USE_REGEX_CONTAINER_ID),
-    new SubmenuButton(DOM_SELECTORS.SAVE_SCHEDULE_SUBMENU_TOGGLE_BUTTON_ID, DOM_SELECTORS.SAVE_SCHEDULE_AS_FILE_SUBMENU_ID),
-  ];
+  #navSubmenuTogglingButtons = [];
+
+  /**
+   * @brief Initializes button list.
+   */
+  constructor() {
+    this.#navSubmenuTogglingButtons.push(
+      new SubmenuButton(DOM_SELECTORS.CHANGE_PAGE_THEME_SUBMENU_TOGGLE_BUTTON_ID, DOM_SELECTORS.CHANGE_PAGE_THEME_SUBMENU_ID));
+    this.#navSubmenuTogglingButtons.push(
+      new SubmenuButton(DOM_SELECTORS.CHANGE_PAGE_LANGUAGE_SUBMENU_TOGGLE_BUTTON_ID, DOM_SELECTORS.CHANGE_PAGE_LANGUAGE_SUBMENU_ID));
+    this.#navSubmenuTogglingButtons.push(
+      new SubmenuButton(DOM_SELECTORS.SAVE_SCHEDULE_SUBMENU_TOGGLE_BUTTON_ID, DOM_SELECTORS.SAVE_SCHEDULE_AS_FILE_SUBMENU_ID));
+    this.#navSubmenuTogglingButtons.push(
+      new SubmenuButton(DOM_SELECTORS.HOW_TO_USE_REGEX_CONTAINER_TOGGLE_BUTTON_ID, DOM_SELECTORS.HOW_TO_USE_REGEX_CONTAINER_ID));
+  }
 
   /**
    * @brief Initializes all nav buttons and their submenu behaviours.
    */
-  constructor() {
+  initialize() {
     NavBar.#initToggleBehaviourNavContainerButton();
     this.#initToggleBehaviourSubmenuButtons();
     behaviourInitializers.initChangeLanguageBtnBehaviours();
